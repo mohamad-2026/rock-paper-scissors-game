@@ -38,3 +38,6 @@ def check_age(age):
     print(check_age(20))
     print(check_age(10))
     print(check_age(18))
+
+    fruits = ["پرتقال"  "موز"  "سیب"]
+    print(fruits)

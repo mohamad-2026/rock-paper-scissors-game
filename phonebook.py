@@ -12,7 +12,11 @@ def add_contact():
     phone = input("Phone: ")
     contact = {"name": name, "phone": phone}
     contacts.append(contact)
-    print("Contact added successfully!")
+    print("contact added successfully!")
+    
+f = open("contacts.txt", "w") 
+f.write(str(contacts)) 
+f.close() 
 
 def show_contacts():
     if len(contacts) == 0:
@@ -48,3 +52,14 @@ while True:
         break
     else:
         print("Invalid choice. Please try again.")
+
+import os
+
+if os.path.exists("contacts.txt"):
+    f = open("contacts.txt","r")
+    contacts = eval(f.read())
+    f.close()
+else:
+    contacts = []
+    
+    
